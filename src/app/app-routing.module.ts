@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './usuarios/lista/list.component';
-import { UsuarioComponent } from './usuarios/usuario/usuario.component';
+import { UserComponent } from './usuarios/usuario/user.component';
 
 const routes: Routes = [
     {
@@ -11,7 +11,7 @@ const routes: Routes = [
     },
     {
         path: 'usuario/:id',
-        component: UsuarioComponent
+        component: UserComponent
     },
     {
         path: '**',
