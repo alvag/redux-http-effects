@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListaComponent } from './lista/lista.component';
+import { ListComponent } from './lista/list.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 
-@NgModule({
+@NgModule( {
     imports: [
         CommonModule
     ],
     declarations: [
-        ListaComponent,
+        ListComponent,
         UsuarioComponent
     ],
     exports: [
-        ListaComponent,
+        ListComponent,
         UsuarioComponent
     ]
-})
-export class UsuariosModule { }
+} )
+export class UsuariosModule {}

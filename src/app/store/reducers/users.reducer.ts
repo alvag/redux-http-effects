@@ -1,8 +1,8 @@
-import { Usuario } from '../../models/usuario.model';
+import { User } from '../../models/usuario.model';
 import * as fromUsers from '../actions';
 
 export interface UsersState {
-    users: Usuario[];
+    users: User[];
     loaded: boolean;
     loading: boolean;
     error: any;
@@ -21,7 +21,8 @@ export function usersReducer( state = initState, action: fromUsers.usersActions 
         case fromUsers.LOAD_USERS:
             return {
                 ...state,
-                loading: true
+                loading: true,
+                error: null
             };
         case fromUsers.LOAD_USERS_SUCCESS:
             return {

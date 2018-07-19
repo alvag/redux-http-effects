@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { ListaComponent } from './usuarios/lista/lista.component';
+import { ListComponent } from './usuarios/lista/list.component';
 import { UsuarioComponent } from './usuarios/usuario/usuario.component';
 
 const routes: Routes = [
     {
         path: 'home',
-        component: ListaComponent
+        component: ListComponent
     },
     {
         path: 'usuario/:id',
@@ -19,11 +19,11 @@ const routes: Routes = [
     }
 ];
 
-@NgModule({
+@NgModule( {
     imports: [
         CommonModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot( routes )
     ],
-    exports: [RouterModule]
-})
-export class AppRoutingModule { }
+    exports: [ RouterModule ]
+} )
+export class AppRoutingModule {}

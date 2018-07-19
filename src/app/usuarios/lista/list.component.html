@@ -1,0 +1,35 @@
+<div class="row" *ngIf="loading">
+    <div class="col">
+        <div class="alert-alert alert-info text-center pt-5 pb-5">
+            <i class="fa fa-sync fa-spin fa-3x"></i>
+            <h1>Espere por favor...</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row" *ngIf="error">
+    <div class="col">
+        <div class="alert-alert alert-danger text-center pt-5 pb-5">
+            <i class="fa fa-times fa-3x"></i>
+            <h2>Error: {{error.status}}</h2>
+            <p>{{error.message}}</p>
+            <br>
+            {{error.url}}
+        </div>
+    </div>
+</div>
+
+<div class="card-columns" *ngIf="!loading">
+    <div *ngFor="let usuario of users" class="card">
+        <img class="card-img-top" [src]="usuario.avatar">
+        <div class="card-body">
+            <h5 class="card-title">{{usuario.first_name}} {{usuario.last_name}}</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text">
+                <span class="text-muted">
+                    ID: {{usuario.id}}
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
