@@ -1,7 +1,7 @@
-import { UsuariosEffects } from './usuarios.effects';
+import { UsersEffects } from './users.effects';
 
 export const effectsArr: any[] = [
-    UsuariosEffects
+    UsersEffects
 ];
 
-export * from './usuarios.effects';
+export * from './users.effects';
